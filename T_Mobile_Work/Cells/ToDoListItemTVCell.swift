@@ -10,6 +10,17 @@ import UIKit
 
 class ToDoListItemTVCell: UITableViewCell {
 
+    
+    @IBOutlet weak var checkMarkImageView: UIImageView!
+    @IBOutlet weak var toDoTitleLabel: UILabel!
+    @IBOutlet weak var toDoSubTitleLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!{
+        didSet{
+            profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+            profileImageView.layer.masksToBounds = true
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
